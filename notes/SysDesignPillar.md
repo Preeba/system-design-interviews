@@ -1,7 +1,7 @@
 
 Fantastic Four of System Design
 
-![img_2.png](SysDesign4Pillar.png)
+![img_2.png](../diagrams/SysDesign4Pillar.png)
 
 ### Scalability
 Scalability ensures that your application can handle more load without compromising performance.
