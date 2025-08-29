@@ -132,8 +132,6 @@ Below figure explains the 1-0n-1 flow
   6. Chat server 2 forwards the message to User B. There is a persistent WebSocket connection between User B and Chat server 2.
 ```
 
-Perfect 👍 Let me redraw the architecture you uploaded, but this time I’ll include both **login flow** and **messaging flow** with the **Message Queue** and persistence.
-
 Here’s a **Mermaid diagram**:
 
 ```mermaid
@@ -141,13 +139,13 @@ flowchart TD
     %% Login Flow
     UserA[User A] -->|1. login| LB[Load Balancer]
     LB -->|2| API[API Servers]
-    API -->|3| SD[Service Discovery (ZooKeeper)]
+    API -->|3| SD[Service Discovery-ZooKeeper]
     API -->|assigned server| CS2[Chat Server 2]
     UserA -->|4. WebSocket| CS2
     
     %% Messaging Flow
     CS2 -->|send message| MQ[Message Queue]
-    MQ --> KV[KV Store (Message persistence)]
+    MQ --> KV[KV Store-Message persistence]
     MQ --> CS1[Chat Server 1]
     MQ --> CSN[Chat Server N]
     MQ --> PN[Push Notification Servers]
