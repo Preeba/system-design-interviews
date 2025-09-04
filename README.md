@@ -18,6 +18,10 @@ It serves as a study guide and reference for preparing for backend, distributed 
 System design interviews test your ability to design scalable, reliable, and maintainable systems.  
 This repo is my personal preparation guide, with concise explanations and example designs.
 
+Goal of major companies --
+* Effortlessly handle billions of users, terabytes of data, and massive spikes in traffic
+* Requires balancing competing priorities: speed versus cost, consistency versus availability, simplicity versus flexibility - right trade-offs for specific use case.
+
 ---
 
 ## 🔑 Key Topics
